@@ -1,7 +1,13 @@
-export async function getPosts(page = 1, limit = 9, search = '') {
+import { promises as fs } from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
+const postsDirectory = path.join(process.cwd(), 'posts');
+
+export async function getAllPosts(page = 1, limit = 9, search = '') {
   const files = await fs.readdir(postsDirectory);
   let posts = await Promise.all(
-    files.map(async (filename) => {
+    files.map(async (filename: string) => {
       const filePath = path.join(postsDirectory, filename);
       const fileContents = await fs.readFile(filePath, 'utf8');
       const { data, content } = matter(fileContents);
@@ -42,14 +48,3 @@ interface Post {
   excerpt: string;
   content: string;
 }
-
-export function getAllPosts(): Post[] {
-  // This is a placeholder. In a real application, you'd fetch posts from an API or database
-  return [
-    { id: 1, title: 'First Post', excerpt: 'This is the first post', content: 'Content of the first post' },
-    { id: 2, title: 'Second Post', excerpt: 'This is the second post', content: 'Content of the second post' },
-    // Add more posts as needed
-  ];
-}
-
-// ... other existing functions ...
