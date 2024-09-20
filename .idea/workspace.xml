@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa8c31c9-0bcd-44c6-a166-ffc3955e09a4" name="Changes" comment="feat: implement search and pagination features">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Pagination.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/posts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/posts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/posts/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PostMetadata.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PostMetadata.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PostPreview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PostPreview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/getPostMetadata.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/getPostMetadata.ts" afterDir="false" />
-    </list>
+    <list default="true" id="aa8c31c9-0bcd-44c6-a166-ffc3955e09a4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726837870370</updated>
-      <workItem from="1726837875781" duration="2376000" />
+      <workItem from="1726837875781" duration="2740000" />
     </task>
     <task id="LOCAL-00001" summary="feat(app/page.tsx): refactor HomePage to async function with search and pagination features">
       <option name="closed" value="true" />
@@ -135,7 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726838696629</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: implement search and pagination features">
+      <option name="closed" value="true" />
+      <created>1726840295938</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726840295938</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Implement search functionality (adding-search-feature)&#10;&#10;This commit implements the search functionality on the blog's&#10;homepage. It includes the following changes:&#10;&#10;- Adds a search bar component to the homepage.&#10;- Updates the homepage to display search results.&#10;- Replaces `PostCard` with `PostPreview` component.&#10;- Styles the homepage to display posts in a grid layout.">
+      <option name="closed" value="true" />
+      <created>1726840615372</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726840615372</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +154,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat(app/page.tsx): refactor HomePage to async function with search and pagination features" />
     <MESSAGE value="feat: implement search and pagination features" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement search and pagination features" />
+    <MESSAGE value="feat: Implement search functionality (adding-search-feature)&#10;&#10;This commit implements the search functionality on the blog's&#10;homepage. It includes the following changes:&#10;&#10;- Adds a search bar component to the homepage.&#10;- Updates the homepage to display search results.&#10;- Replaces `PostCard` with `PostPreview` component.&#10;- Styles the homepage to display posts in a grid layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Implement search functionality (adding-search-feature)&#10;&#10;This commit implements the search functionality on the blog's&#10;homepage. It includes the following changes:&#10;&#10;- Adds a search bar component to the homepage.&#10;- Updates the homepage to display search results.&#10;- Replaces `PostCard` with `PostPreview` component.&#10;- Styles the homepage to display posts in a grid layout." />
   </component>
 </project>
