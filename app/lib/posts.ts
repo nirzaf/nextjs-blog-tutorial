@@ -36,4 +36,20 @@ export async function getPosts(page = 1, limit = 9, search = '') {
   };
 }
 
+interface Post {
+  id: number;
+  title: string;
+  excerpt: string;
+  content: string;
+}
+
+export function getAllPosts(): Post[] {
+  // This is a placeholder. In a real application, you'd fetch posts from an API or database
+  return [
+    { id: 1, title: 'First Post', excerpt: 'This is the first post', content: 'Content of the first post' },
+    { id: 2, title: 'Second Post', excerpt: 'This is the second post', content: 'Content of the second post' },
+    // Add more posts as needed
+  ];
+}
+
 // ... other existing functions ...

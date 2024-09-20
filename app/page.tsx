@@ -1,28 +1,21 @@
-import { getPosts } from "@/lib/posts";
-import PostCard from "@/components/PostCard";
-import Pagination from "@/components/Pagination";
-import SearchBar from "@/components/SearchBar";
+import React from 'react';
+import { getAllPosts } from '@/lib/posts';
+import PostCard from '@/components/PostCard';
+import Pagination from '@/components/Pagination';
+import SearchBar from '@/components/SearchBar';
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: { page?: string; search?: string };
-}) {
-  const page = Number(searchParams.page) || 1;
-  const search = searchParams.search || "";
-  const postsPerPage = 9;
-
-  const { posts, total } = await getPosts(page, postsPerPage, search);
+export default function Home() {
+  const posts = getAllPosts();
 
   return (
-    <main className="mx-auto max-w-5xl px-6">
-      <SearchBar initialSearch={search} />
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+    <div className="container mx-auto p-4">
+      <SearchBar />
+      <div className="my-8">
         {posts.map((post) => (
-          <PostCard key={post.slug} {...post} />
+          <PostCard key={post.id} title={post.title} excerpt={post.excerpt} />
         ))}
       </div>
-      <Pagination currentPage={page} totalPosts={total} postsPerPage={postsPerPage} />
-    </main>
+      <Pagination currentPage={1} totalPages={5} />
+    </div>
   );
 }

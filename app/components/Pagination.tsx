@@ -1,28 +1,25 @@
-import Link from 'next/link';
+import React from 'react';
 
 interface PaginationProps {
   currentPage: number;
-  totalPosts: number;
-  postsPerPage: number;
+  totalPages: number;
 }
 
-export default function Pagination({ currentPage, totalPosts, postsPerPage }: PaginationProps) {
-  const totalPages = Math.ceil(totalPosts / postsPerPage);
-
-  if (totalPages <= 1) return null;
-
+const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
   return (
-    <div className="flex justify-center space-x-2 mt-8">
-      {currentPage > 1 && (
-        <Link href={`/?page=${currentPage - 1}`} className="px-4 py-2 bg-gray-200 rounded">
-          Previous
-        </Link>
-      )}
-      {currentPage < totalPages && (
-        <Link href={`/?page=${currentPage + 1}`} className="px-4 py-2 bg-gray-200 rounded">
-          Next
-        </Link>
-      )}
+    <div className="flex justify-center space-x-2">
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <button
+          key={page}
+          className={`px-3 py-1 border rounded ${
+            currentPage === page ? 'bg-blue-500 text-white' : ''
+          }`}
+        >
+          {page}
+        </button>
+      ))}
     </div>
   );
-}
+};
+
+export default Pagination;
