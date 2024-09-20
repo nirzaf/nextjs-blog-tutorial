@@ -1,6 +1,6 @@
 import React from 'react';
 import { getAllPosts } from '@/app/lib/posts';
-import PostCard from '@/app/components/PostCard';
+import PostPreview from '@/app/components/PostPreview';
 import Pagination from './components/Pagination';
 import SearchBar from './components/SearchBar';
 
@@ -18,9 +18,9 @@ export default async function Home({
   return (
     <div className="container mx-auto p-4">
       <SearchBar initialSearch={search} />
-      <div className="my-8">
+      <div className="my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {posts.map((post) => (
-          <PostCard key={post.slug} {...post} />
+          <PostPreview key={post.slug} {...post} subtitle={post.subtitle || ''} />
         ))}
       </div>
       <Pagination currentPage={page} totalPosts={total} postsPerPage={postsPerPage} />
